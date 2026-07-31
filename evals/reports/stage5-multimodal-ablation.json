@@ -1,0 +1,1066 @@
+{
+  "dataset_name": "shoplens-stage5-multimodal-fixture",
+  "dataset_version": "2026-07-22.1",
+  "generated_at": "2026-07-22T04:15:10.752427+00:00",
+  "corpus_product_count": 24,
+  "pure_image_query_count": 12,
+  "multimodal_query_count": 12,
+  "parameters": {
+    "image_candidate_k": 50,
+    "fusion_candidate_k": 30,
+    "rrf_k": 60,
+    "text_weight": 1.0,
+    "image_weight": 1.25
+  },
+  "models": {
+    "image_embedding": "google/siglip2-base-patch16-224@fixture-visual-v1:768"
+  },
+  "limitations": [
+    "The corpus contains only 24 synthetic CC0 products and synthetic artwork.",
+    "The deterministic pixel provider validates engineering behavior, not SigLIP2 quality.",
+    "Reference images are checked-in product artwork; open-domain photos are not measured.",
+    "All annotated failures are retained and cannot be generalized to production traffic."
+  ],
+  "modes": [
+    {
+      "mode": "pure_image",
+      "query_count": 12,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.7090909090909091,
+      "ndcg_at_10": 0.9809383510574825,
+      "mrr": 1.0,
+      "hard_condition_violation_rate": 0.0,
+      "empty_result_accuracy": 1.0,
+      "latency_p50_ms": 48.177,
+      "latency_p95_ms": 78.473,
+      "failure_query_ids": [
+        "img-01",
+        "img-02",
+        "img-06",
+        "img-08",
+        "img-09",
+        "img-10",
+        "img-11"
+      ],
+      "queries": [
+        {
+          "id": "img-01",
+          "reference_source_id": "fixture-001",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-001",
+            "fixture-002",
+            "fixture-006",
+            "fixture-018"
+          ],
+          "retrieved_source_ids": [
+            "fixture-001",
+            "fixture-018",
+            "fixture-002",
+            "fixture-024",
+            "fixture-006",
+            "fixture-005"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.8,
+          "ndcg_at_10": 0.9458462366209638,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 78.473
+        },
+        {
+          "id": "img-02",
+          "reference_source_id": "fixture-003",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-003",
+            "fixture-015",
+            "fixture-016",
+            "fixture-022"
+          ],
+          "retrieved_source_ids": [
+            "fixture-003",
+            "fixture-015",
+            "fixture-022",
+            "fixture-016",
+            "fixture-014"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.8,
+          "ndcg_at_10": 0.9733434704234325,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 49.718
+        },
+        {
+          "id": "img-03",
+          "reference_source_id": "fixture-004",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-004",
+            "fixture-017",
+            "fixture-023"
+          ],
+          "retrieved_source_ids": [
+            "fixture-004",
+            "fixture-023",
+            "fixture-017"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.6,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 51.616
+        },
+        {
+          "id": "img-04",
+          "reference_source_id": "fixture-007",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-007",
+            "fixture-012",
+            "fixture-013"
+          ],
+          "retrieved_source_ids": [
+            "fixture-007",
+            "fixture-012",
+            "fixture-013"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.6,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 48.177
+        },
+        {
+          "id": "img-05",
+          "reference_source_id": "fixture-008",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-008",
+            "fixture-009",
+            "fixture-019",
+            "fixture-020"
+          ],
+          "retrieved_source_ids": [
+            "fixture-008",
+            "fixture-019",
+            "fixture-020",
+            "fixture-009"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.8,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 52.065
+        },
+        {
+          "id": "img-06",
+          "reference_source_id": "fixture-010",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-010",
+            "fixture-011",
+            "fixture-021"
+          ],
+          "retrieved_source_ids": [
+            "fixture-010",
+            "fixture-011",
+            "fixture-021"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.6,
+          "ndcg_at_10": 0.9721212198129313,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 51.359
+        },
+        {
+          "id": "img-07",
+          "reference_source_id": "fixture-014",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-003",
+            "fixture-014",
+            "fixture-015",
+            "fixture-022"
+          ],
+          "retrieved_source_ids": [
+            "fixture-014",
+            "fixture-022",
+            "fixture-003",
+            "fixture-015",
+            "fixture-016"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.8,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 48.13
+        },
+        {
+          "id": "img-08",
+          "reference_source_id": "fixture-018",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-001",
+            "fixture-002",
+            "fixture-006",
+            "fixture-018"
+          ],
+          "retrieved_source_ids": [
+            "fixture-018",
+            "fixture-001",
+            "fixture-002",
+            "fixture-024",
+            "fixture-006",
+            "fixture-005"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.8,
+          "ndcg_at_10": 0.9955388707359232,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 48.012
+        },
+        {
+          "id": "img-09",
+          "reference_source_id": "fixture-020",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-008",
+            "fixture-009",
+            "fixture-019",
+            "fixture-020"
+          ],
+          "retrieved_source_ids": [
+            "fixture-020",
+            "fixture-008",
+            "fixture-019",
+            "fixture-009"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.8,
+          "ndcg_at_10": 0.959229624413194,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 47.859
+        },
+        {
+          "id": "img-10",
+          "reference_source_id": "fixture-021",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-010",
+            "fixture-011",
+            "fixture-021"
+          ],
+          "retrieved_source_ids": [
+            "fixture-021",
+            "fixture-011",
+            "fixture-010"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.6,
+          "ndcg_at_10": 0.9721212198129313,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 47.994
+        },
+        {
+          "id": "img-11",
+          "reference_source_id": "fixture-023",
+          "query": null,
+          "expected_source_ids": [
+            "fixture-004",
+            "fixture-017",
+            "fixture-023"
+          ],
+          "retrieved_source_ids": [
+            "fixture-023",
+            "fixture-017",
+            "fixture-004"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.6,
+          "ndcg_at_10": 0.9721212198129313,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 47.909
+        },
+        {
+          "id": "img-12",
+          "reference_source_id": "fixture-024",
+          "query": null,
+          "expected_source_ids": [],
+          "retrieved_source_ids": [],
+          "recall_at_5": null,
+          "recall_at_10": null,
+          "precision_at_5": null,
+          "ndcg_at_10": null,
+          "reciprocal_rank": null,
+          "hard_filter_violations": 0,
+          "latency_ms": 52.718
+        }
+      ]
+    },
+    {
+      "mode": "mixed_image_only",
+      "query_count": 12,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.29090909090909095,
+      "ndcg_at_10": 0.9090278616764628,
+      "mrr": 0.893939393939394,
+      "hard_condition_violation_rate": 0.0,
+      "empty_result_accuracy": 1.0,
+      "latency_p50_ms": 52.235,
+      "latency_p95_ms": 56.29,
+      "failure_query_ids": [
+        "mix-03",
+        "mix-08",
+        "mix-10"
+      ],
+      "queries": [
+        {
+          "id": "mix-01",
+          "reference_source_id": "fixture-002",
+          "query": "地铁通勤降噪 戴眼镜舒适",
+          "expected_source_ids": [
+            "fixture-001",
+            "fixture-006"
+          ],
+          "retrieved_source_ids": [
+            "fixture-001",
+            "fixture-006"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 51.854
+        },
+        {
+          "id": "mix-02",
+          "reference_source_id": "fixture-001",
+          "query": "室内参考声音 有线",
+          "expected_source_ids": [
+            "fixture-018"
+          ],
+          "retrieved_source_ids": [
+            "fixture-018"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 51.812
+        },
+        {
+          "id": "mix-03",
+          "reference_source_id": "fixture-003",
+          "query": "通话麦克风清晰",
+          "expected_source_ids": [
+            "fixture-003",
+            "fixture-022"
+          ],
+          "retrieved_source_ids": [
+            "fixture-003",
+            "fixture-022"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 0.8339912323981488,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 56.094
+        },
+        {
+          "id": "mix-04",
+          "reference_source_id": "fixture-004",
+          "query": "白色有线 线控麦克风",
+          "expected_source_ids": [
+            "fixture-017"
+          ],
+          "retrieved_source_ids": [
+            "fixture-017"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 52.235
+        },
+        {
+          "id": "mix-05",
+          "reference_source_id": "fixture-007",
+          "query": "办公室会议 杆式麦克风",
+          "expected_source_ids": [
+            "fixture-007",
+            "fixture-012"
+          ],
+          "retrieved_source_ids": [
+            "fixture-007",
+            "fixture-012"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 52.582
+        },
+        {
+          "id": "mix-06",
+          "reference_source_id": "fixture-008",
+          "query": "户外运动 防水 开放不堵耳",
+          "expected_source_ids": [
+            "fixture-008",
+            "fixture-019"
+          ],
+          "retrieved_source_ids": [
+            "fixture-008",
+            "fixture-019"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 55.42
+        },
+        {
+          "id": "mix-07",
+          "reference_source_id": "fixture-011",
+          "query": "游泳训练 高防水",
+          "expected_source_ids": [
+            "fixture-011"
+          ],
+          "retrieved_source_ids": [
+            "fixture-011",
+            "fixture-021",
+            "fixture-010"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 56.29
+        },
+        {
+          "id": "mix-08",
+          "reference_source_id": "fixture-014",
+          "query": "便携 主动降噪",
+          "expected_source_ids": [
+            "fixture-015"
+          ],
+          "retrieved_source_ids": [
+            "fixture-022",
+            "fixture-003",
+            "fixture-015"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 0.5,
+          "reciprocal_rank": 0.3333333333333333,
+          "hard_filter_violations": 0,
+          "latency_ms": 55.537
+        },
+        {
+          "id": "mix-09",
+          "reference_source_id": "fixture-018",
+          "query": "高阻抗有线 室内使用",
+          "expected_source_ids": [
+            "fixture-024"
+          ],
+          "retrieved_source_ids": [
+            "fixture-024"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 55.926
+        },
+        {
+          "id": "mix-10",
+          "reference_source_id": "fixture-019",
+          "query": "长续航 开放式",
+          "expected_source_ids": [
+            "fixture-009",
+            "fixture-020"
+          ],
+          "retrieved_source_ids": [
+            "fixture-008",
+            "fixture-020",
+            "fixture-009"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 0.6653152460429406,
+          "reciprocal_rank": 0.5,
+          "hard_filter_violations": 0,
+          "latency_ms": 51.979
+        },
+        {
+          "id": "mix-11",
+          "reference_source_id": "fixture-021",
+          "query": "城市通勤 骨传导",
+          "expected_source_ids": [
+            "fixture-021"
+          ],
+          "retrieved_source_ids": [
+            "fixture-021",
+            "fixture-010"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 51.676
+        },
+        {
+          "id": "mix-12",
+          "reference_source_id": "fixture-001",
+          "query": "主动降噪头戴式",
+          "expected_source_ids": [],
+          "retrieved_source_ids": [],
+          "recall_at_5": null,
+          "recall_at_10": null,
+          "precision_at_5": null,
+          "ndcg_at_10": null,
+          "reciprocal_rank": null,
+          "hard_filter_violations": 0,
+          "latency_ms": 52.022
+        }
+      ]
+    },
+    {
+      "mode": "mixed_text_only",
+      "query_count": 12,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.29090909090909095,
+      "ndcg_at_10": 0.9755390249278093,
+      "mrr": 1.0,
+      "hard_condition_violation_rate": 0.0,
+      "empty_result_accuracy": 1.0,
+      "latency_p50_ms": 71.683,
+      "latency_p95_ms": 88.177,
+      "failure_query_ids": [
+        "mix-10"
+      ],
+      "queries": [
+        {
+          "id": "mix-01",
+          "reference_source_id": "fixture-002",
+          "query": "地铁通勤降噪 戴眼镜舒适",
+          "expected_source_ids": [
+            "fixture-001",
+            "fixture-006"
+          ],
+          "retrieved_source_ids": [
+            "fixture-001",
+            "fixture-006"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 88.177
+        },
+        {
+          "id": "mix-02",
+          "reference_source_id": "fixture-001",
+          "query": "室内参考声音 有线",
+          "expected_source_ids": [
+            "fixture-018"
+          ],
+          "retrieved_source_ids": [
+            "fixture-018"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 71.683
+        },
+        {
+          "id": "mix-03",
+          "reference_source_id": "fixture-003",
+          "query": "通话麦克风清晰",
+          "expected_source_ids": [
+            "fixture-003",
+            "fixture-022"
+          ],
+          "retrieved_source_ids": [
+            "fixture-022",
+            "fixture-003"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 71.982
+        },
+        {
+          "id": "mix-04",
+          "reference_source_id": "fixture-004",
+          "query": "白色有线 线控麦克风",
+          "expected_source_ids": [
+            "fixture-017"
+          ],
+          "retrieved_source_ids": [
+            "fixture-017"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 73.465
+        },
+        {
+          "id": "mix-05",
+          "reference_source_id": "fixture-007",
+          "query": "办公室会议 杆式麦克风",
+          "expected_source_ids": [
+            "fixture-007",
+            "fixture-012"
+          ],
+          "retrieved_source_ids": [
+            "fixture-007",
+            "fixture-012"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 73.51
+        },
+        {
+          "id": "mix-06",
+          "reference_source_id": "fixture-008",
+          "query": "户外运动 防水 开放不堵耳",
+          "expected_source_ids": [
+            "fixture-008",
+            "fixture-019"
+          ],
+          "retrieved_source_ids": [
+            "fixture-008",
+            "fixture-019"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 83.734
+        },
+        {
+          "id": "mix-07",
+          "reference_source_id": "fixture-011",
+          "query": "游泳训练 高防水",
+          "expected_source_ids": [
+            "fixture-011"
+          ],
+          "retrieved_source_ids": [
+            "fixture-011",
+            "fixture-010",
+            "fixture-021"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 74.214
+        },
+        {
+          "id": "mix-08",
+          "reference_source_id": "fixture-014",
+          "query": "便携 主动降噪",
+          "expected_source_ids": [
+            "fixture-015"
+          ],
+          "retrieved_source_ids": [
+            "fixture-015",
+            "fixture-003",
+            "fixture-022"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 71.448
+        },
+        {
+          "id": "mix-09",
+          "reference_source_id": "fixture-018",
+          "query": "高阻抗有线 室内使用",
+          "expected_source_ids": [
+            "fixture-024"
+          ],
+          "retrieved_source_ids": [
+            "fixture-024"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 68.826
+        },
+        {
+          "id": "mix-10",
+          "reference_source_id": "fixture-019",
+          "query": "长续航 开放式",
+          "expected_source_ids": [
+            "fixture-009",
+            "fixture-020"
+          ],
+          "retrieved_source_ids": [
+            "fixture-009",
+            "fixture-008",
+            "fixture-020"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 0.7309292742059024,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 66.134
+        },
+        {
+          "id": "mix-11",
+          "reference_source_id": "fixture-021",
+          "query": "城市通勤 骨传导",
+          "expected_source_ids": [
+            "fixture-021"
+          ],
+          "retrieved_source_ids": [
+            "fixture-021",
+            "fixture-010"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 61.618
+        },
+        {
+          "id": "mix-12",
+          "reference_source_id": "fixture-001",
+          "query": "主动降噪头戴式",
+          "expected_source_ids": [],
+          "retrieved_source_ids": [],
+          "recall_at_5": null,
+          "recall_at_10": null,
+          "precision_at_5": null,
+          "ndcg_at_10": null,
+          "reciprocal_rank": null,
+          "hard_filter_violations": 0,
+          "latency_ms": 62.483
+        }
+      ]
+    },
+    {
+      "mode": "mixed_full",
+      "query_count": 12,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.29090909090909095,
+      "ndcg_at_10": 0.9036739937184239,
+      "mrr": 0.893939393939394,
+      "hard_condition_violation_rate": 0.0,
+      "empty_result_accuracy": 1.0,
+      "latency_p50_ms": 61.337,
+      "latency_p95_ms": 65.517,
+      "failure_query_ids": [
+        "mix-03",
+        "mix-08",
+        "mix-10"
+      ],
+      "queries": [
+        {
+          "id": "mix-01",
+          "reference_source_id": "fixture-002",
+          "query": "地铁通勤降噪 戴眼镜舒适",
+          "expected_source_ids": [
+            "fixture-001",
+            "fixture-006"
+          ],
+          "retrieved_source_ids": [
+            "fixture-001",
+            "fixture-006"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 59.793
+        },
+        {
+          "id": "mix-02",
+          "reference_source_id": "fixture-001",
+          "query": "室内参考声音 有线",
+          "expected_source_ids": [
+            "fixture-018"
+          ],
+          "retrieved_source_ids": [
+            "fixture-018"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 57.712
+        },
+        {
+          "id": "mix-03",
+          "reference_source_id": "fixture-003",
+          "query": "通话麦克风清晰",
+          "expected_source_ids": [
+            "fixture-003",
+            "fixture-022"
+          ],
+          "retrieved_source_ids": [
+            "fixture-003",
+            "fixture-022"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 0.8339912323981488,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 61.905
+        },
+        {
+          "id": "mix-04",
+          "reference_source_id": "fixture-004",
+          "query": "白色有线 线控麦克风",
+          "expected_source_ids": [
+            "fixture-017"
+          ],
+          "retrieved_source_ids": [
+            "fixture-017"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 62.542
+        },
+        {
+          "id": "mix-05",
+          "reference_source_id": "fixture-007",
+          "query": "办公室会议 杆式麦克风",
+          "expected_source_ids": [
+            "fixture-007",
+            "fixture-012"
+          ],
+          "retrieved_source_ids": [
+            "fixture-007",
+            "fixture-012"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 59.783
+        },
+        {
+          "id": "mix-06",
+          "reference_source_id": "fixture-008",
+          "query": "户外运动 防水 开放不堵耳",
+          "expected_source_ids": [
+            "fixture-008",
+            "fixture-019"
+          ],
+          "retrieved_source_ids": [
+            "fixture-008",
+            "fixture-019"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 63.49
+        },
+        {
+          "id": "mix-07",
+          "reference_source_id": "fixture-011",
+          "query": "游泳训练 高防水",
+          "expected_source_ids": [
+            "fixture-011"
+          ],
+          "retrieved_source_ids": [
+            "fixture-011",
+            "fixture-021",
+            "fixture-010"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 63.907
+        },
+        {
+          "id": "mix-08",
+          "reference_source_id": "fixture-014",
+          "query": "便携 主动降噪",
+          "expected_source_ids": [
+            "fixture-015"
+          ],
+          "retrieved_source_ids": [
+            "fixture-022",
+            "fixture-003",
+            "fixture-015"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 0.5,
+          "reciprocal_rank": 0.3333333333333333,
+          "hard_filter_violations": 0,
+          "latency_ms": 65.517
+        },
+        {
+          "id": "mix-09",
+          "reference_source_id": "fixture-018",
+          "query": "高阻抗有线 室内使用",
+          "expected_source_ids": [
+            "fixture-024"
+          ],
+          "retrieved_source_ids": [
+            "fixture-024"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 58.936
+        },
+        {
+          "id": "mix-10",
+          "reference_source_id": "fixture-019",
+          "query": "长续航 开放式",
+          "expected_source_ids": [
+            "fixture-009",
+            "fixture-020"
+          ],
+          "retrieved_source_ids": [
+            "fixture-008",
+            "fixture-009",
+            "fixture-020"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.4,
+          "ndcg_at_10": 0.606422698504514,
+          "reciprocal_rank": 0.5,
+          "hard_filter_violations": 0,
+          "latency_ms": 61.337
+        },
+        {
+          "id": "mix-11",
+          "reference_source_id": "fixture-021",
+          "query": "城市通勤 骨传导",
+          "expected_source_ids": [
+            "fixture-021"
+          ],
+          "retrieved_source_ids": [
+            "fixture-021",
+            "fixture-010"
+          ],
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "precision_at_5": 0.2,
+          "ndcg_at_10": 1.0,
+          "reciprocal_rank": 1.0,
+          "hard_filter_violations": 0,
+          "latency_ms": 60.323
+        },
+        {
+          "id": "mix-12",
+          "reference_source_id": "fixture-001",
+          "query": "主动降噪头戴式",
+          "expected_source_ids": [],
+          "retrieved_source_ids": [],
+          "recall_at_5": null,
+          "recall_at_10": null,
+          "precision_at_5": null,
+          "ndcg_at_10": null,
+          "reciprocal_rank": null,
+          "hard_filter_violations": 0,
+          "latency_ms": 62.278
+        }
+      ]
+    }
+  ]
+}

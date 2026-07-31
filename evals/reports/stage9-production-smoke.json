@@ -1,0 +1,33 @@
+{
+    "schema_version":  "stage9-fixture-smoke-v1",
+    "generated_at":  "2026-07-23T01:52:54.6267130Z",
+    "transport":  "http",
+    "endpoints":  {
+                      "api":  "http://127.0.0.1:18001",
+                      "web":  "http://127.0.0.1:13001"
+                  },
+    "checks":  {
+                   "readiness":  "ready",
+                   "fixture_product_count":  24,
+                   "total_product_count":  24,
+                   "search_mode":  "hybrid_rrf",
+                   "search_result_count":  2,
+                   "repeated_search_cache":  "HIT",
+                   "assistant_status":  "completed",
+                   "recommendation_count":  2,
+                   "evidence_count":  30,
+                   "citation_validation":  true,
+                   "tool_step_count":  2,
+                   "metrics_http_status":  200,
+                   "web_http_status":  200,
+                   "open_graph_http_status":  200
+               },
+    "samples":  {
+                    "search_source_ids":  [
+                                              "https://fixtures.shoplens.local/products/fixture-001",
+                                              "https://fixtures.shoplens.local/products/fixture-006"
+                                          ],
+                    "assistant_trace_id":  "ae29445a-aa65-4d56-86de-1447ace51edf"
+                },
+    "result":  "passed"
+}

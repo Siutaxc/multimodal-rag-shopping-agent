@@ -1,0 +1,953 @@
+{
+  "name": "shoplens-stage8-expanded-text-ablation",
+  "version": "2026-07-22.1",
+  "frozen_lexical_dataset": "evals/datasets/stage3_lexical_queries.json",
+  "frozen_semantic_dataset": "evals/datasets/stage4_text_queries.json",
+  "fixture_source_version": "2026-07-22.1",
+  "corpus_product_count": 24,
+  "license": "CC0-1.0; generated entirely from the synthetic ShopLens fixture",
+  "queries": [
+    {
+      "id": "s8-001",
+      "query": "Auralis Metro ANC 40",
+      "relevance": {
+        "fixture-001": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-002",
+      "query": "Auralis Auralis Metro ANC 40",
+      "relevance": {
+        "fixture-001": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-003",
+      "query": "Auralis Metro ANC 40 价格 899.00 CNY",
+      "relevance": {
+        "fixture-001": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-004",
+      "query": "Auralis Studio ANC 55",
+      "relevance": {
+        "fixture-002": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-005",
+      "query": "Auralis Auralis Studio ANC 55",
+      "relevance": {
+        "fixture-002": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-006",
+      "query": "Auralis Studio ANC 55 价格 1299.00 CNY",
+      "relevance": {
+        "fixture-002": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-007",
+      "query": "MetroTone Buds N8",
+      "relevance": {
+        "fixture-003": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-008",
+      "query": "MetroTone MetroTone Buds N8",
+      "relevance": {
+        "fixture-003": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-009",
+      "query": "MetroTone Buds N8 价格 499.00 CNY",
+      "relevance": {
+        "fixture-003": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-010",
+      "query": "MetroTone Air S2",
+      "relevance": {
+        "fixture-004": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-011",
+      "query": "MetroTone MetroTone Air S2",
+      "relevance": {
+        "fixture-004": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-012",
+      "query": "MetroTone Air S2 价格 199.00 CNY",
+      "relevance": {
+        "fixture-004": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-013",
+      "query": "QuietArc Q1 Lite",
+      "relevance": {
+        "fixture-005": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-014",
+      "query": "QuietArc QuietArc Q1 Lite",
+      "relevance": {
+        "fixture-005": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-015",
+      "query": "QuietArc Q1 Lite 价格 399.00 CNY",
+      "relevance": {
+        "fixture-005": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-016",
+      "query": "QuietArc Q3 Travel",
+      "relevance": {
+        "fixture-006": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-017",
+      "query": "QuietArc QuietArc Q3 Travel",
+      "relevance": {
+        "fixture-006": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-018",
+      "query": "QuietArc Q3 Travel 价格 699.00 CNY",
+      "relevance": {
+        "fixture-006": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-019",
+      "query": "QuietArc Q5 Office",
+      "relevance": {
+        "fixture-007": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-020",
+      "query": "QuietArc QuietArc Q5 Office",
+      "relevance": {
+        "fixture-007": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-021",
+      "query": "QuietArc Q5 Office 价格 559.00 CNY",
+      "relevance": {
+        "fixture-007": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-022",
+      "query": "OpenPath Loop 10",
+      "relevance": {
+        "fixture-008": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-023",
+      "query": "OpenPath OpenPath Loop 10",
+      "relevance": {
+        "fixture-008": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-024",
+      "query": "OpenPath Loop 10 价格 459.00 CNY",
+      "relevance": {
+        "fixture-008": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-025",
+      "query": "OpenPath Loop 14",
+      "relevance": {
+        "fixture-009": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-026",
+      "query": "OpenPath OpenPath Loop 14",
+      "relevance": {
+        "fixture-009": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-027",
+      "query": "OpenPath Loop 14 价格 659.00 CNY",
+      "relevance": {
+        "fixture-009": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-028",
+      "query": "BoneWave Run B1",
+      "relevance": {
+        "fixture-010": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-029",
+      "query": "BoneWave BoneWave Run B1",
+      "relevance": {
+        "fixture-010": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-030",
+      "query": "BoneWave Run B1 价格 379.00 CNY",
+      "relevance": {
+        "fixture-010": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-031",
+      "query": "BoneWave Swim B2",
+      "relevance": {
+        "fixture-011": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-032",
+      "query": "BoneWave BoneWave Swim B2",
+      "relevance": {
+        "fixture-011": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-033",
+      "query": "BoneWave Swim B2 价格 799.00 CNY",
+      "relevance": {
+        "fixture-011": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-034",
+      "query": "ClearCall Work C20",
+      "relevance": {
+        "fixture-012": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-035",
+      "query": "ClearCall ClearCall Work C20",
+      "relevance": {
+        "fixture-012": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-036",
+      "query": "ClearCall Work C20 价格 329.00 CNY",
+      "relevance": {
+        "fixture-012": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-037",
+      "query": "ClearCall Work C40 ANC",
+      "relevance": {
+        "fixture-013": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-038",
+      "query": "ClearCall ClearCall Work C40 ANC",
+      "relevance": {
+        "fixture-013": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-039",
+      "query": "ClearCall Work C40 ANC 价格 749.00 CNY",
+      "relevance": {
+        "fixture-013": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-040",
+      "query": "Auralis Pocket P2",
+      "relevance": {
+        "fixture-014": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-041",
+      "query": "Auralis Auralis Pocket P2",
+      "relevance": {
+        "fixture-014": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-042",
+      "query": "Auralis Pocket P2 价格 259.00 CNY",
+      "relevance": {
+        "fixture-014": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-043",
+      "query": "Auralis Pocket P4 ANC",
+      "relevance": {
+        "fixture-015": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-044",
+      "query": "Auralis Auralis Pocket P4 ANC",
+      "relevance": {
+        "fixture-015": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-045",
+      "query": "Auralis Pocket P4 ANC 价格 599.00 CNY",
+      "relevance": {
+        "fixture-015": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-046",
+      "query": "MetroTone Cable M1",
+      "relevance": {
+        "fixture-016": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-047",
+      "query": "MetroTone MetroTone Cable M1",
+      "relevance": {
+        "fixture-016": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-048",
+      "query": "MetroTone Cable M1 价格 99.00 CNY",
+      "relevance": {
+        "fixture-016": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-049",
+      "query": "MetroTone Cable M3",
+      "relevance": {
+        "fixture-017": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-050",
+      "query": "MetroTone MetroTone Cable M3",
+      "relevance": {
+        "fixture-017": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-051",
+      "query": "MetroTone Cable M3 价格 129.00 CNY",
+      "relevance": {
+        "fixture-017": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-052",
+      "query": "QuietArc Q7 Reference",
+      "relevance": {
+        "fixture-018": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-053",
+      "query": "QuietArc QuietArc Q7 Reference",
+      "relevance": {
+        "fixture-018": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-054",
+      "query": "QuietArc Q7 Reference 价格 999.00 CNY",
+      "relevance": {
+        "fixture-018": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-055",
+      "query": "OpenPath Clip O2",
+      "relevance": {
+        "fixture-019": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-056",
+      "query": "OpenPath OpenPath Clip O2",
+      "relevance": {
+        "fixture-019": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-057",
+      "query": "OpenPath Clip O2 价格 299.00 CNY",
+      "relevance": {
+        "fixture-019": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-058",
+      "query": "OpenPath Clip O5",
+      "relevance": {
+        "fixture-020": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-059",
+      "query": "OpenPath OpenPath Clip O5",
+      "relevance": {
+        "fixture-020": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-060",
+      "query": "OpenPath Clip O5 价格 549.00 CNY",
+      "relevance": {
+        "fixture-020": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-061",
+      "query": "BoneWave City B3",
+      "relevance": {
+        "fixture-021": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-062",
+      "query": "BoneWave BoneWave City B3",
+      "relevance": {
+        "fixture-021": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-063",
+      "query": "BoneWave City B3 价格 469.00 CNY",
+      "relevance": {
+        "fixture-021": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-064",
+      "query": "ClearCall Bud C8",
+      "relevance": {
+        "fixture-022": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-065",
+      "query": "ClearCall ClearCall Bud C8",
+      "relevance": {
+        "fixture-022": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-066",
+      "query": "ClearCall Bud C8 价格 429.00 CNY",
+      "relevance": {
+        "fixture-022": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-067",
+      "query": "ClearCall Air C5",
+      "relevance": {
+        "fixture-023": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-068",
+      "query": "ClearCall ClearCall Air C5",
+      "relevance": {
+        "fixture-023": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-069",
+      "query": "ClearCall Air C5 价格 279.00 CNY",
+      "relevance": {
+        "fixture-023": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-070",
+      "query": "Auralis Studio Wired 80",
+      "relevance": {
+        "fixture-024": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-071",
+      "query": "Auralis Auralis Studio Wired 80",
+      "relevance": {
+        "fixture-024": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-072",
+      "query": "Auralis Studio Wired 80 价格 1599.00 CNY",
+      "relevance": {
+        "fixture-024": 3
+      },
+      "filters": {},
+      "cohort": "product_identity"
+    },
+    {
+      "id": "s8-073",
+      "query": "Auralis Metro ANC 40",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-074",
+      "query": "Auralis Studio ANC 55",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-075",
+      "query": "MetroTone Buds N8",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-076",
+      "query": "MetroTone Air S2",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-077",
+      "query": "QuietArc Q1 Lite",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-078",
+      "query": "QuietArc Q3 Travel",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-079",
+      "query": "QuietArc Q5 Office",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-080",
+      "query": "OpenPath Loop 10",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-081",
+      "query": "OpenPath Loop 14",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-082",
+      "query": "BoneWave Run B1",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-083",
+      "query": "BoneWave Swim B2",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-084",
+      "query": "ClearCall Work C20",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-085",
+      "query": "ClearCall Work C40 ANC",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-086",
+      "query": "Auralis Pocket P2",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-087",
+      "query": "Auralis Pocket P4 ANC",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-088",
+      "query": "MetroTone Cable M1",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-089",
+      "query": "MetroTone Cable M3",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-090",
+      "query": "QuietArc Q7 Reference",
+      "relevance": {},
+      "filters": {
+        "currency": "CNY",
+        "price_max": "0.00"
+      },
+      "cohort": "adversarial_empty"
+    },
+    {
+      "id": "s8-091",
+      "query": "通勤地铁主动降噪，预算七百元",
+      "relevance": {
+        "fixture-003": 3,
+        "fixture-006": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-092",
+      "query": "开放式跑步耳机，防水至少 IP55",
+      "relevance": {
+        "fixture-009": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-093",
+      "query": "游泳训练骨传导 IP68",
+      "relevance": {
+        "fixture-011": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-094",
+      "query": "办公室开会要杆式麦克风",
+      "relevance": {
+        "fixture-007": 3,
+        "fixture-012": 3,
+        "fixture-013": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-095",
+      "query": "百元以内有线入耳通话",
+      "relevance": {
+        "fixture-016": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-096",
+      "query": "长续航折叠旅行降噪头戴",
+      "relevance": {
+        "fixture-006": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-097",
+      "query": "戴眼镜也舒适的通勤头戴耳机",
+      "relevance": {
+        "fixture-001": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-098",
+      "query": "不要堵耳的轻量耳夹",
+      "relevance": {
+        "fixture-019": 3,
+        "fixture-020": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-099",
+      "query": "高阻抗有线头戴室内听音",
+      "relevance": {
+        "fixture-024": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-100",
+      "query": "五百元内小巧入耳主动降噪",
+      "relevance": {
+        "fixture-003": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-101",
+      "query": "抗风噪户外通话无线耳机",
+      "relevance": {
+        "fixture-006": 3,
+        "fixture-009": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    },
+    {
+      "id": "s8-102",
+      "query": "半入耳无线通话，三百元内",
+      "relevance": {
+        "fixture-004": 3,
+        "fixture-023": 3
+      },
+      "filters": {},
+      "cohort": "scenario"
+    }
+  ]
+}

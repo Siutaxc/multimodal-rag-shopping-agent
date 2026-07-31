@@ -1,0 +1,580 @@
+{
+  "dataset_name": "shoplens-stage3-lexical",
+  "dataset_version": "2026-07-22.1",
+  "search_document_version": "stage3-lexical-v1",
+  "generated_at": "2026-07-22T03:37:14.740839+00:00",
+  "corpus_product_count": 24,
+  "limitations": [
+    "The corpus contains only 24 synthetic CC0 fixtures.",
+    "Queries were authored for deterministic engineering regression, not production quality claims.",
+    "PostgreSQL simple FTS has no general Chinese word segmentation; documents expose explicit fact aliases and observed scene terms."
+  ],
+  "query_count": 30,
+  "judged_query_count": 29,
+  "empty_expected_query_count": 1,
+  "recall_at_5": 0.9844006568144499,
+  "recall_at_10": 1.0,
+  "precision_at_5": 0.45517241379310347,
+  "ndcg_at_10": 1.0,
+  "mrr": 1.0,
+  "hard_condition_violation_rate": 0.0,
+  "empty_result_accuracy": 1.0,
+  "queries": [
+    {
+      "id": "lex-01",
+      "query": "Auralis Metro ANC 40",
+      "expected_source_ids": [
+        "fixture-001"
+      ],
+      "retrieved_source_ids": [
+        "fixture-001"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-02",
+      "query": "Auralis Studio ANC 55",
+      "expected_source_ids": [
+        "fixture-002"
+      ],
+      "retrieved_source_ids": [
+        "fixture-002"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-03",
+      "query": "MetroTone Buds N8",
+      "expected_source_ids": [
+        "fixture-003"
+      ],
+      "retrieved_source_ids": [
+        "fixture-003"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-04",
+      "query": "QuietArc Q3 Travel",
+      "expected_source_ids": [
+        "fixture-006"
+      ],
+      "retrieved_source_ids": [
+        "fixture-006"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-05",
+      "query": "OpenPath Loop 14",
+      "expected_source_ids": [
+        "fixture-009"
+      ],
+      "retrieved_source_ids": [
+        "fixture-009"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-06",
+      "query": "BoneWave Swim B2",
+      "expected_source_ids": [
+        "fixture-011"
+      ],
+      "retrieved_source_ids": [
+        "fixture-011"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-07",
+      "query": "ClearCall Work C40 ANC",
+      "expected_source_ids": [
+        "fixture-013"
+      ],
+      "retrieved_source_ids": [
+        "fixture-013"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-08",
+      "query": "Auralis Pocket P4 ANC",
+      "expected_source_ids": [
+        "fixture-015"
+      ],
+      "retrieved_source_ids": [
+        "fixture-015"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-09",
+      "query": "MetroTone Cable M1",
+      "expected_source_ids": [
+        "fixture-016"
+      ],
+      "retrieved_source_ids": [
+        "fixture-016"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-10",
+      "query": "QuietArc Q7 Reference",
+      "expected_source_ids": [
+        "fixture-018"
+      ],
+      "retrieved_source_ids": [
+        "fixture-018"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-11",
+      "query": "OpenPath Clip O5",
+      "expected_source_ids": [
+        "fixture-020"
+      ],
+      "retrieved_source_ids": [
+        "fixture-020"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-12",
+      "query": "ClearCall Bud C8",
+      "expected_source_ids": [
+        "fixture-022"
+      ],
+      "retrieved_source_ids": [
+        "fixture-022"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-13",
+      "query": "Auralis",
+      "expected_source_ids": [
+        "fixture-001",
+        "fixture-002",
+        "fixture-014",
+        "fixture-015",
+        "fixture-024"
+      ],
+      "retrieved_source_ids": [
+        "fixture-001",
+        "fixture-014",
+        "fixture-015",
+        "fixture-002",
+        "fixture-024"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 1.0,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-14",
+      "query": "QuietArc",
+      "expected_source_ids": [
+        "fixture-005",
+        "fixture-006",
+        "fixture-007",
+        "fixture-018"
+      ],
+      "retrieved_source_ids": [
+        "fixture-005",
+        "fixture-006",
+        "fixture-007",
+        "fixture-018"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.8,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-15",
+      "query": "BoneWave",
+      "expected_source_ids": [
+        "fixture-010",
+        "fixture-011",
+        "fixture-021"
+      ],
+      "retrieved_source_ids": [
+        "fixture-021",
+        "fixture-010",
+        "fixture-011"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.6,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-16",
+      "query": "主动降噪",
+      "expected_source_ids": [
+        "fixture-001",
+        "fixture-002",
+        "fixture-003",
+        "fixture-006",
+        "fixture-013",
+        "fixture-015",
+        "fixture-022"
+      ],
+      "retrieved_source_ids": [
+        "fixture-001",
+        "fixture-015",
+        "fixture-002",
+        "fixture-022",
+        "fixture-013",
+        "fixture-003",
+        "fixture-006"
+      ],
+      "recall_at_5": 0.7142857142857143,
+      "recall_at_10": 1.0,
+      "precision_at_5": 1.0,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-17",
+      "query": "骨传导",
+      "expected_source_ids": [
+        "fixture-010",
+        "fixture-011",
+        "fixture-021"
+      ],
+      "retrieved_source_ids": [
+        "fixture-021",
+        "fixture-010",
+        "fixture-011"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.6,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-18",
+      "query": "开放式",
+      "expected_source_ids": [
+        "fixture-008",
+        "fixture-009",
+        "fixture-019",
+        "fixture-020"
+      ],
+      "retrieved_source_ids": [
+        "fixture-019",
+        "fixture-020",
+        "fixture-008",
+        "fixture-009"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.8,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-19",
+      "query": "半入耳式",
+      "expected_source_ids": [
+        "fixture-004",
+        "fixture-017",
+        "fixture-023"
+      ],
+      "retrieved_source_ids": [
+        "fixture-023",
+        "fixture-004",
+        "fixture-017"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.6,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-20",
+      "query": "有线",
+      "expected_source_ids": [
+        "fixture-016",
+        "fixture-017",
+        "fixture-018",
+        "fixture-024"
+      ],
+      "retrieved_source_ids": [
+        "fixture-024",
+        "fixture-016",
+        "fixture-017",
+        "fixture-018"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.8,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-21",
+      "query": "通话 入耳式",
+      "expected_source_ids": [
+        "fixture-003",
+        "fixture-014",
+        "fixture-015",
+        "fixture-016",
+        "fixture-022"
+      ],
+      "retrieved_source_ids": [
+        "fixture-016",
+        "fixture-014",
+        "fixture-022",
+        "fixture-003",
+        "fixture-015"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 1.0,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-22",
+      "query": "通勤",
+      "expected_source_ids": [
+        "fixture-001",
+        "fixture-021"
+      ],
+      "retrieved_source_ids": [
+        "fixture-001",
+        "fixture-021"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.4,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-23",
+      "query": "办公",
+      "expected_source_ids": [
+        "fixture-007",
+        "fixture-012",
+        "fixture-013"
+      ],
+      "retrieved_source_ids": [
+        "fixture-012",
+        "fixture-013",
+        "fixture-007"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.6,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-24",
+      "query": "户外 运动",
+      "expected_source_ids": [
+        "fixture-010"
+      ],
+      "retrieved_source_ids": [
+        "fixture-010"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-25",
+      "query": "headphones",
+      "expected_source_ids": [
+        "fixture-004",
+        "fixture-014",
+        "fixture-016",
+        "fixture-017",
+        "fixture-019",
+        "fixture-023"
+      ],
+      "retrieved_source_ids": [
+        "fixture-014",
+        "fixture-023",
+        "fixture-004",
+        "fixture-016",
+        "fixture-017",
+        "fixture-019"
+      ],
+      "recall_at_5": 0.8333333333333334,
+      "recall_at_10": 1.0,
+      "precision_at_5": 1.0,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-26",
+      "query": "wireless",
+      "expected_source_ids": [
+        "fixture-001",
+        "fixture-006"
+      ],
+      "retrieved_source_ids": [
+        "fixture-001",
+        "fixture-006"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.4,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-27",
+      "query": "wireless",
+      "expected_source_ids": [
+        "fixture-015"
+      ],
+      "retrieved_source_ids": [
+        "fixture-015"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-28",
+      "query": "microphone",
+      "expected_source_ids": [
+        "fixture-012",
+        "fixture-013",
+        "fixture-022"
+      ],
+      "retrieved_source_ids": [
+        "fixture-022",
+        "fixture-012",
+        "fixture-013"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.6,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-29",
+      "query": "headphones",
+      "expected_source_ids": [
+        "fixture-014"
+      ],
+      "retrieved_source_ids": [
+        "fixture-014"
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "precision_at_5": 0.2,
+      "ndcg_at_10": 1.0,
+      "reciprocal_rank": 1.0,
+      "hard_filter_violations": 0
+    },
+    {
+      "id": "lex-30",
+      "query": "headphones",
+      "expected_source_ids": [],
+      "retrieved_source_ids": [],
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "precision_at_5": null,
+      "ndcg_at_10": null,
+      "reciprocal_rank": null,
+      "hard_filter_violations": 0
+    }
+  ]
+}

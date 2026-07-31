@@ -1,0 +1,143 @@
+name: shoplens
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16@sha256:1d533553fefe4f12e5d80c7b80622ba0c382abb5758856f52983d8789179f0fb
+    environment:
+      POSTGRES_USER: ${SHOPLENS_POSTGRES_USER:-shoplens}
+      POSTGRES_PASSWORD: ${SHOPLENS_POSTGRES_PASSWORD:-shoplens}
+      POSTGRES_DB: ${SHOPLENS_POSTGRES_DB:-shoplens}
+    ports:
+      - "${SHOPLENS_POSTGRES_BIND:-127.0.0.1}:${SHOPLENS_POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - shoplens-postgres-data:/var/lib/postgresql/data
+      - ./infra/docker/postgres/001-enable-vector.sql:/docker-entrypoint-initdb.d/001-enable-vector.sql:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB} && psql -U $${POSTGRES_USER} -d $${POSTGRES_DB} -tAc \"SELECT 1 FROM pg_extension WHERE extname = 'vector'\" | grep -q 1",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  redis:
+    image: redis:7.4-alpine@sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "${SHOPLENS_REDIS_BIND:-127.0.0.1}:${SHOPLENS_REDIS_PORT:-6379}:6379"
+    volumes:
+      - shoplens-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    environment:
+      SHOPLENS_APP_ENV: ${SHOPLENS_APP_ENV:-development}
+      SHOPLENS_LOG_LEVEL: ${SHOPLENS_LOG_LEVEL:-INFO}
+      SHOPLENS_CORS_ALLOWED_ORIGINS: '${SHOPLENS_CORS_ALLOWED_ORIGINS:-["http://localhost:3000","http://127.0.0.1:3000"]}'
+      SHOPLENS_DEPENDENCY_TIMEOUT_SECONDS: ${SHOPLENS_DEPENDENCY_TIMEOUT_SECONDS:-2}
+      SHOPLENS_CACHE_ENABLED: ${SHOPLENS_CACHE_ENABLED:-true}
+      SHOPLENS_CACHE_TTL_SECONDS: ${SHOPLENS_CACHE_TTL_SECONDS:-60}
+      SHOPLENS_CACHE_NAMESPACE: ${SHOPLENS_CACHE_NAMESPACE:-stage8-v1}
+      SHOPLENS_RATE_LIMIT_ENABLED: ${SHOPLENS_RATE_LIMIT_ENABLED:-true}
+      SHOPLENS_RATE_LIMIT_REQUESTS: ${SHOPLENS_RATE_LIMIT_REQUESTS:-120}
+      SHOPLENS_RATE_LIMIT_WINDOW_SECONDS: ${SHOPLENS_RATE_LIMIT_WINDOW_SECONDS:-60}
+      SHOPLENS_PROVIDER_RETRY_ATTEMPTS: ${SHOPLENS_PROVIDER_RETRY_ATTEMPTS:-3}
+      SHOPLENS_PROVIDER_RETRY_BACKOFF_SECONDS: ${SHOPLENS_PROVIDER_RETRY_BACKOFF_SECONDS:-0.05}
+      SHOPLENS_CIRCUIT_BREAKER_FAILURE_THRESHOLD: ${SHOPLENS_CIRCUIT_BREAKER_FAILURE_THRESHOLD:-3}
+      SHOPLENS_CIRCUIT_BREAKER_RECOVERY_SECONDS: ${SHOPLENS_CIRCUIT_BREAKER_RECOVERY_SECONDS:-30}
+      SHOPLENS_SLOW_QUERY_THRESHOLD_MS: ${SHOPLENS_SLOW_QUERY_THRESHOLD_MS:-100}
+      SHOPLENS_DATABASE_URL: postgresql://${SHOPLENS_POSTGRES_USER:-shoplens}:${SHOPLENS_POSTGRES_PASSWORD:-shoplens}@postgres:5432/${SHOPLENS_POSTGRES_DB:-shoplens}
+      SHOPLENS_REDIS_URL: redis://redis:6379/0
+      SHOPLENS_OBJECT_STORAGE_PATH: /app/data/storage
+      SHOPLENS_EMBEDDING_PROVIDER: ${SHOPLENS_EMBEDDING_PROVIDER:-fixture}
+      SHOPLENS_EMBEDDING_ENDPOINT: ${SHOPLENS_EMBEDDING_ENDPOINT:-}
+      SHOPLENS_EMBEDDING_API_KEY: ${SHOPLENS_EMBEDDING_API_KEY:-}
+      SHOPLENS_EMBEDDING_MODEL_NAME: ${SHOPLENS_EMBEDDING_MODEL_NAME:-BAAI/bge-m3}
+      SHOPLENS_EMBEDDING_MODEL_VERSION: ${SHOPLENS_EMBEDDING_MODEL_VERSION:-fixture-semantic-v1}
+      SHOPLENS_RERANKER_PROVIDER: ${SHOPLENS_RERANKER_PROVIDER:-fixture}
+      SHOPLENS_RERANKER_ENDPOINT: ${SHOPLENS_RERANKER_ENDPOINT:-}
+      SHOPLENS_RERANKER_API_KEY: ${SHOPLENS_RERANKER_API_KEY:-}
+      SHOPLENS_RERANKER_MODEL_NAME: ${SHOPLENS_RERANKER_MODEL_NAME:-BAAI/bge-reranker-v2-m3}
+      SHOPLENS_RERANKER_MODEL_VERSION: ${SHOPLENS_RERANKER_MODEL_VERSION:-fixture-semantic-v1}
+      SHOPLENS_IMAGE_EMBEDDING_PROVIDER: ${SHOPLENS_IMAGE_EMBEDDING_PROVIDER:-fixture}
+      SHOPLENS_IMAGE_EMBEDDING_ENDPOINT: ${SHOPLENS_IMAGE_EMBEDDING_ENDPOINT:-}
+      SHOPLENS_IMAGE_EMBEDDING_API_KEY: ${SHOPLENS_IMAGE_EMBEDDING_API_KEY:-}
+      SHOPLENS_IMAGE_EMBEDDING_MODEL_NAME: ${SHOPLENS_IMAGE_EMBEDDING_MODEL_NAME:-google/siglip2-base-patch16-224}
+      SHOPLENS_IMAGE_EMBEDDING_MODEL_VERSION: ${SHOPLENS_IMAGE_EMBEDDING_MODEL_VERSION:-fixture-visual-v1}
+      SHOPLENS_AGENT_PROVIDER: ${SHOPLENS_AGENT_PROVIDER:-fixture}
+      SHOPLENS_AGENT_ENDPOINT: ${SHOPLENS_AGENT_ENDPOINT:-}
+      SHOPLENS_AGENT_API_KEY: ${SHOPLENS_AGENT_API_KEY:-}
+      SHOPLENS_AGENT_MODEL_NAME: ${SHOPLENS_AGENT_MODEL_NAME:-shoplens/bounded-shopping-agent}
+      SHOPLENS_AGENT_MODEL_VERSION: ${SHOPLENS_AGENT_MODEL_VERSION:-fixture-rules-v1}
+      SHOPLENS_AGENT_TIMEOUT_SECONDS: ${SHOPLENS_AGENT_TIMEOUT_SECONDS:-4}
+      SHOPLENS_AGENT_MAX_TOOL_STEPS: ${SHOPLENS_AGENT_MAX_TOOL_STEPS:-4}
+      SHOPLENS_AGENT_RESULT_LIMIT: ${SHOPLENS_AGENT_RESULT_LIMIT:-3}
+      SHOPLENS_AGENT_SESSION_TTL_SECONDS: ${SHOPLENS_AGENT_SESSION_TTL_SECONDS:-86400}
+      SHOPLENS_AGENT_TRACE_TTL_SECONDS: ${SHOPLENS_AGENT_TRACE_TTL_SECONDS:-86400}
+    volumes:
+      - shoplens-object-storage:/app/data/storage
+    ports:
+      - "${SHOPLENS_API_BIND:-127.0.0.1}:${SHOPLENS_API_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready', timeout=2)",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 5s
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_SHOPLENS_API_BASE_URL: ${NEXT_PUBLIC_SHOPLENS_API_BASE_URL:-http://localhost:8000}
+        NEXT_PUBLIC_SHOPLENS_SITE_URL: ${NEXT_PUBLIC_SHOPLENS_SITE_URL:-http://localhost:3000}
+    environment:
+      NODE_ENV: production
+    ports:
+      - "${SHOPLENS_WEB_BIND:-127.0.0.1}:${SHOPLENS_WEB_PORT:-3000}:3000"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  shoplens-postgres-data:
+  shoplens-redis-data:
+  shoplens-object-storage:

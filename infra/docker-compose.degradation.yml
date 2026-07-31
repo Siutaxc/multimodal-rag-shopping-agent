@@ -1,0 +1,9 @@
+name: shoplens
+
+services:
+  api:
+    environment:
+      SHOPLENS_CACHE_NAMESPACE: stage9-degradation-v1
+      SHOPLENS_RERANKER_PROVIDER: http
+      SHOPLENS_RERANKER_ENDPOINT: http://127.0.0.1:9/v1/rerank
+      SHOPLENS_RERANKER_API_KEY: ""

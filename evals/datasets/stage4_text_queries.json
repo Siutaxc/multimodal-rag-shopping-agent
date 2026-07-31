@@ -1,0 +1,27 @@
+{
+  "name": "shoplens-stage4-text-ablation",
+  "version": "2026-07-22.1",
+  "base_dataset": "evals/datasets/stage3_lexical_queries.json",
+  "fixture_source_version": "2026-07-22.1",
+  "corpus_product_count": 24,
+  "semantic_queries": [
+    {"id":"sem-01","query":"地铁里想安静一点的通勤耳机","relevance":{"fixture-001":3,"fixture-006":3,"fixture-002":2},"filters":{"anc":true}},
+    {"id":"sem-02","query":"戴眼镜长时间听歌，不要太夹头","relevance":{"fixture-001":3},"filters":{"category":"over_ear"}},
+    {"id":"sem-03","query":"开会时人声清楚的办公耳机","relevance":{"fixture-007":3,"fixture-012":3,"fixture-013":3},"filters":{}},
+    {"id":"sem-04","query":"跑步时还能听到周围环境","relevance":{"fixture-010":3,"fixture-008":2,"fixture-009":2},"filters":{"wireless":true}},
+    {"id":"sem-05","query":"游泳训练用，防水要可靠","relevance":{"fixture-011":3},"filters":{"category":"bone_conduction"}},
+    {"id":"sem-06","query":"一周少充电的长续航头戴耳机","relevance":{"fixture-002":3,"fixture-006":3,"fixture-001":2},"filters":{"category":"over_ear","wireless":true}},
+    {"id":"sem-07","query":"不想塞耳朵，还要能听见环境音","relevance":{"fixture-008":3,"fixture-009":3,"fixture-019":3,"fixture-020":3},"filters":{"category":"open_ear"}},
+    {"id":"sem-08","query":"五百元内地铁通勤降噪入耳耳机","relevance":{"fixture-003":3},"filters":{"category":"in_ear","price_max":"500.00","currency":"CNY","anc":true}},
+    {"id":"sem-09","query":"视频会议麦克风清晰，不要入耳式","relevance":{"fixture-007":3,"fixture-012":3,"fixture-013":3},"filters":{"category":"on_ear"}},
+    {"id":"sem-10","query":"户外雨天运动，防水耐用","relevance":{"fixture-010":3,"fixture-011":2,"fixture-009":2},"filters":{"wireless":true}},
+    {"id":"sem-11","query":"便携小巧，适合每天随身带","relevance":{"fixture-014":3,"fixture-003":2},"filters":{"category":"in_ear","wireless":true}},
+    {"id":"sem-12","query":"喜欢人声靠前、低频适中的声音","relevance":{"fixture-003":3},"filters":{}},
+    {"id":"sem-13","query":"旅行收纳方便、可以折叠的降噪耳机","relevance":{"fixture-006":3},"filters":{"category":"over_ear","anc":true}},
+    {"id":"sem-14","query":"高阻抗，适合室内安静听音","relevance":{"fixture-024":3,"fixture-018":2},"filters":{"category":"over_ear","wireless":false}},
+    {"id":"sem-15","query":"耳朵敏感，不堵耳而且轻量","relevance":{"fixture-008":3,"fixture-019":3,"fixture-020":2,"fixture-009":2},"filters":{"category":"open_ear"}},
+    {"id":"sem-16","query":"便宜的有线耳塞，用来打电话","relevance":{"fixture-016":3},"filters":{"category":"in_ear","wireless":false,"price_max":"150.00","currency":"CNY"}},
+    {"id":"sem-17","query":"一百元内无线头戴主动降噪","relevance":{},"filters":{"category":"over_ear","wireless":true,"anc":true,"price_max":"100.00","currency":"CNY"}},
+    {"id":"sem-18","query":"户外通话时减少风噪","relevance":{"fixture-006":3,"fixture-009":3},"filters":{"wireless":true}}
+  ]
+}

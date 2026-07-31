@@ -1,0 +1,1 @@
+"""ShopLens API test suite."""

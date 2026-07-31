@@ -1,0 +1,1 @@
+"""ShopLens domain types."""

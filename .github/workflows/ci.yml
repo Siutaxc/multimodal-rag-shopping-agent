@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -e "./services/api[dev]"
+      - run: python -m ruff check services/api
+      - run: python -m mypy --config-file services/api/pyproject.toml services/api/app services/api/tests
+      - run: python -m pytest services/api/tests -m "not integration"
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:web
+      - run: npm run typecheck:web
+      - run: npm run test:web
+      - run: npm run build:web
+
+  infrastructure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -e "./services/api[dev]"
+      - run: docker compose --project-directory . -f infra/docker-compose.yml up -d --wait postgres redis
+      - run: python -m pytest services/api/tests/integration -m integration
+        env:
+          SHOPLENS_RUN_INTEGRATION: "1"
+          SHOPLENS_DATABASE_URL: postgresql://shoplens:shoplens@127.0.0.1:5432/shoplens
+          SHOPLENS_REDIS_URL: redis://127.0.0.1:6379/0
+      - run: docker compose --project-directory . -f infra/docker-compose.yml up -d --build --wait
+      - run: docker compose --project-directory . -f infra/docker-compose.yml exec -T api python -m app.ingestion.cli --fixture data/fixtures/headphones.json
+      - run: docker compose --project-directory . -f infra/docker-compose.yml exec -T api python -m app.retrieval.index_cli
+      - run: docker compose --project-directory . -f infra/docker-compose.yml exec -T api python -m app.images.index_cli
+      - run: pwsh -NoProfile -File scripts/verify-fixture.ps1 -OutputPath evals/reports/stage9-fixture-smoke.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage9-fixture-smoke
+          path: evals/reports/stage9-fixture-smoke.json
+      - if: always()
+        run: docker compose --project-directory . -f infra/docker-compose.yml down

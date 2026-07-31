@@ -1,0 +1,46 @@
+{
+  "name": "shoplens",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "stack:up": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev.ps1",
+    "stack:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/bootstrap-fixture.ps1",
+    "verify:fixture": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-fixture.ps1 -OutputPath evals/reports/stage9-fixture-smoke.json",
+    "demo:degradation:on": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/demo-degradation.ps1 -Action Enable",
+    "demo:degradation:off": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/demo-degradation.ps1 -Action Disable",
+    "test:degradation": "python -m pytest services/api/tests/test_stage8_resilience.py -q -p no:cacheprovider && npm run test:e2e --workspace @shoplens/web -- --grep Reranker",
+    "stack:down": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop.ps1",
+    "dev:web": "npm run dev --workspace @shoplens/web",
+    "dev:api": "python -m uvicorn app.main:app --app-dir services/api --host 127.0.0.1 --port 8000 --reload",
+    "db:migrate": "python -m alembic -c services/api/alembic.ini upgrade head",
+    "data:import:fixture": "python -m app.ingestion.cli --fixture data/fixtures/headphones.json",
+    "data:index:text": "python -m app.retrieval.index_cli",
+    "data:index:image": "python -m app.images.index_cli",
+    "eval:lexical": "python -m app.evaluation.cli",
+    "eval:text": "python -m app.evaluation.stage4_cli",
+    "eval:multimodal": "python -m app.evaluation.stage5_cli",
+    "eval:agent": "python -m app.evaluation.stage6_cli",
+    "eval:stage8": "python -m app.evaluation.stage8_cli",
+    "data:stage8:queries": "python scripts/generate_stage8_dataset.py",
+    "perf:stage8": "python -m app.performance.stage8_cli",
+    "lint:web": "npm run lint --workspace @shoplens/web",
+    "lint:api": "python -m ruff check services/api",
+    "typecheck:web": "npm run typecheck --workspace @shoplens/web",
+    "typecheck:api": "python -m mypy --config-file services/api/pyproject.toml services/api/app services/api/tests",
+    "test:web": "npm run test --workspace @shoplens/web",
+    "test:e2e": "npm run test:e2e --workspace @shoplens/web",
+    "test:e2e:live": "npm run test:e2e:live --workspace @shoplens/web",
+    "test:api": "python -m pytest services/api/tests -m \"not integration\"",
+    "build:web": "npm run build --workspace @shoplens/web",
+    "check:web": "npm run lint:web && npm run typecheck:web && npm run test:web && npm run build:web",
+    "check:api": "npm run lint:api && npm run typecheck:api && npm run test:api",
+    "check": "npm run check:api && npm run check:web"
+  },
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=10.0.0"
+  }
+}

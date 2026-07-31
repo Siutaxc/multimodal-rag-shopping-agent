@@ -1,0 +1,33 @@
+{
+  "name": "shoplens-stage5-multimodal-fixture",
+  "version": "2026-07-22.1",
+  "fixture_source_version": "2026-07-22.1",
+  "corpus_product_count": 24,
+  "queries": [
+    {"id":"img-01","kind":"pure_image","reference_source_id":"fixture-001","relevance":{"fixture-001":3,"fixture-006":2,"fixture-002":1,"fixture-018":1},"filters":{"category":"over_ear"}},
+    {"id":"img-02","kind":"pure_image","reference_source_id":"fixture-003","relevance":{"fixture-003":3,"fixture-022":2,"fixture-015":1,"fixture-016":1},"filters":{"category":"in_ear"}},
+    {"id":"img-03","kind":"pure_image","reference_source_id":"fixture-004","relevance":{"fixture-004":3,"fixture-023":2,"fixture-017":1},"filters":{"category":"semi_in_ear"}},
+    {"id":"img-04","kind":"pure_image","reference_source_id":"fixture-007","relevance":{"fixture-007":3,"fixture-012":2,"fixture-013":1},"filters":{"category":"on_ear"}},
+    {"id":"img-05","kind":"pure_image","reference_source_id":"fixture-008","relevance":{"fixture-008":3,"fixture-019":2,"fixture-020":1,"fixture-009":1},"filters":{"category":"open_ear"}},
+    {"id":"img-06","kind":"pure_image","reference_source_id":"fixture-010","relevance":{"fixture-010":3,"fixture-021":2,"fixture-011":1},"filters":{"category":"bone_conduction"}},
+    {"id":"img-07","kind":"pure_image","reference_source_id":"fixture-014","relevance":{"fixture-014":3,"fixture-003":1,"fixture-015":1,"fixture-022":1},"filters":{"category":"in_ear"}},
+    {"id":"img-08","kind":"pure_image","reference_source_id":"fixture-018","relevance":{"fixture-018":3,"fixture-001":2,"fixture-002":1,"fixture-006":1},"filters":{"category":"over_ear"}},
+    {"id":"img-09","kind":"pure_image","reference_source_id":"fixture-020","relevance":{"fixture-020":3,"fixture-009":2,"fixture-008":1,"fixture-019":1},"filters":{"category":"open_ear"}},
+    {"id":"img-10","kind":"pure_image","reference_source_id":"fixture-021","relevance":{"fixture-021":3,"fixture-010":2,"fixture-011":1},"filters":{"category":"bone_conduction"}},
+    {"id":"img-11","kind":"pure_image","reference_source_id":"fixture-023","relevance":{"fixture-023":3,"fixture-004":2,"fixture-017":1},"filters":{"category":"semi_in_ear"}},
+    {"id":"img-12","kind":"pure_image","reference_source_id":"fixture-024","relevance":{},"filters":{"price_max":"50","currency":"CNY"}},
+
+    {"id":"mix-01","kind":"multimodal","reference_source_id":"fixture-002","query":"地铁通勤降噪 戴眼镜舒适","relevance":{"fixture-001":3,"fixture-006":2},"filters":{"category":"over_ear","anc":true,"price_max":"1000","currency":"CNY"}},
+    {"id":"mix-02","kind":"multimodal","reference_source_id":"fixture-001","query":"室内参考声音 有线","relevance":{"fixture-018":3},"filters":{"category":"over_ear","wireless":false,"price_max":"1000","currency":"CNY"}},
+    {"id":"mix-03","kind":"multimodal","reference_source_id":"fixture-003","query":"通话麦克风清晰","relevance":{"fixture-022":3,"fixture-003":2},"filters":{"category":"in_ear","anc":true,"price_max":"500","currency":"CNY"}},
+    {"id":"mix-04","kind":"multimodal","reference_source_id":"fixture-004","query":"白色有线 线控麦克风","relevance":{"fixture-017":3},"filters":{"category":"semi_in_ear","wireless":false,"color":"白色"}},
+    {"id":"mix-05","kind":"multimodal","reference_source_id":"fixture-007","query":"办公室会议 杆式麦克风","relevance":{"fixture-007":3,"fixture-012":2},"filters":{"category":"on_ear","anc":false,"price_max":"600","currency":"CNY"}},
+    {"id":"mix-06","kind":"multimodal","reference_source_id":"fixture-008","query":"户外运动 防水 开放不堵耳","relevance":{"fixture-008":3,"fixture-019":2},"filters":{"category":"open_ear","price_max":"500","wireless":true,"currency":"CNY"}},
+    {"id":"mix-07","kind":"multimodal","reference_source_id":"fixture-011","query":"游泳训练 高防水","relevance":{"fixture-011":3},"filters":{"category":"bone_conduction","price_max":"900","currency":"CNY"}},
+    {"id":"mix-08","kind":"multimodal","reference_source_id":"fixture-014","query":"便携 主动降噪","relevance":{"fixture-015":3},"filters":{"category":"in_ear","anc":true,"price_max":"700","color":"白色","currency":"CNY"}},
+    {"id":"mix-09","kind":"multimodal","reference_source_id":"fixture-018","query":"高阻抗有线 室内使用","relevance":{"fixture-024":3},"filters":{"category":"over_ear","wireless":false,"price_min":"1000","currency":"CNY"}},
+    {"id":"mix-10","kind":"multimodal","reference_source_id":"fixture-019","query":"长续航 开放式","relevance":{"fixture-020":3,"fixture-009":2},"filters":{"category":"open_ear","battery_hours_min":"10","wireless":true}},
+    {"id":"mix-11","kind":"multimodal","reference_source_id":"fixture-021","query":"城市通勤 骨传导","relevance":{"fixture-021":3},"filters":{"category":"bone_conduction","price_max":"500","currency":"CNY"}},
+    {"id":"mix-12","kind":"multimodal","reference_source_id":"fixture-001","query":"主动降噪头戴式","relevance":{},"filters":{"category":"over_ear","anc":true,"price_max":"100","currency":"CNY"}}
+  ]
+}
