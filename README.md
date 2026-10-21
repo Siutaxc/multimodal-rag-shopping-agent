@@ -229,3 +229,11 @@ docs/                架构、数据、API、评测、部署、演示和阶段�
 阶段 7 的完整前端、浏览器体验和实测结果见 [阶段 7 说明](docs/stage-7.md)、[阶段 7 验收记录](docs/stage-7-validation.md)与[三分钟演示流程](docs/stage-7-demo.md)。
 阶段 8 的韧性、可观测、扩展评测与性能结果见 [阶段 8 说明](docs/stage-8.md)、[阶段 8 验收记录](docs/stage-8-validation.md)、[150 条评测报告](evals/reports/stage8-text-ablation.md)与[规模性能报告](evals/reports/stage8-performance.md)。
 阶段 9 的交付总览和验收见 [阶段 9 说明](docs/stage-9.md)与[阶段 9 验收记录](docs/stage-9-validation.md)。重点材料包括：[部署](docs/deployment.md)、[架构](docs/architecture.md)、[数据](docs/data.md)、[HTTP API 示例](docs/api.md)、[评测与数字溯源](docs/evaluation.md)、[图表](docs/diagrams.md)、[已知限制](docs/known-limitations.md)、[四分钟演示](docs/stage-9-demo.md)和[简历/STAR/高频问答](docs/resume-and-interview.md)。
+
+## License
+
+ShopLens is released under the [MIT License](LICENSE).
+
+This license applies to original project code and other materials for which the
+project authors own the necessary rights. Third-party dependencies, pretrained
+models, and external product data remain subject to their respective licenses.
